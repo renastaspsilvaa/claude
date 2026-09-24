@@ -14,7 +14,7 @@ const LOJA = {
   framer: { framer: "", gumroad: "" },
 };
 
-const EMAIL = "geral.renatasofia@gmail.com";
+const EMAIL = "rofi.studio.rs@gmail.com";
 
 /* --------------------------------------------------------- */
 
