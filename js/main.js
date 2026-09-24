@@ -27,7 +27,6 @@ const TITULOS = {
 const NOMES_LOJA = { etsy: "Etsy", gumroad: "Gumroad", framer: "Framer Marketplace" };
 
 const html = document.documentElement;
-html.classList.add("js");
 const calmo = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const rato = window.matchMedia("(pointer: fine)").matches;
 
@@ -64,7 +63,7 @@ function desenhaLoja(l){
   document.querySelectorAll("[data-links]").forEach(caixa => {
     const links = LOJA[caixa.dataset.links] || {};
     const ativos = Object.entries(links).filter(([, url]) => url && url.trim());
-    caixa.replaceChildren();
+    caixa.innerHTML = "";
     if (!ativos.length){
       const s = document.createElement("span");
       s.className = "embreve";
@@ -278,21 +277,24 @@ function formulario(){
   form.addEventListener("input", e => e.target.classList?.remove("erro"));
 }
 
-/* ---------- arranque ---------- */
-aplicaLingua(linguaInicial());
-document.getElementById("lingua")?.addEventListener("click", () => {
+/* ---------- arranque ----------
+   Cada parte arranca à parte: se uma falhar num browser mais antigo,
+   as outras continuam. Os efeitos de entrada (que escondem o conteúdo
+   até aparecer) só se ligam no fim, quando tudo correu bem — assim o
+   texto nunca fica invisível. */
+const tenta = f => { try { f(); } catch (e) { console.warn("Rofi:", e); } };
+
+tenta(() => aplicaLingua(linguaInicial()));
+tenta(() => document.getElementById("lingua")?.addEventListener("click", () => {
   const nova = html.lang === "pt" ? "en" : "pt";
   guarda.escrever("rofi-lingua", nova);
   aplicaLingua(nova);
-});
-const ano = document.getElementById("ano");
-if (ano) ano.textContent = new Date().getFullYear();
+}));
+tenta(() => { const ano = document.getElementById("ano"); if (ano) ano.textContent = new Date().getFullYear(); });
+[cabecalho, menu, inclina, scrollFx, cursor, formulario].forEach(tenta);
 
-cabecalho();
-menu();
-revelar();
-inclina();
-scrollFx();
-cursor();
-formulario();
-requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.add("pronto")));
+if (!calmo && "IntersectionObserver" in window){
+  html.classList.add("js");
+  tenta(revelar);
+  setTimeout(() => document.body.classList.add("pronto"), 80);
+}
