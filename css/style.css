@@ -643,3 +643,14 @@ body::after{display:none}
 
 /* linhas animadas: espaço para as letras que descem (g, j, p, ç) */
 .linha{padding-bottom:.2em;margin-bottom:-.2em}
+
+/* chamada final discreta (o título grande fica só na página de contacto) */
+.chamada{padding-block:clamp(48px,5vw,72px);display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px 40px}
+.chamada .rotulo{margin-bottom:10px;grid-column:1/-1}
+.chamada-titulo{font-size:clamp(26px,2.6vw,42px);line-height:1.1}
+.chamada-titulo br{display:none}
+.chamada-titulo > span{margin-right:.3em}
+.chamada-base{margin:0;padding:0;border:0}
+.chamada-mail{font-family:var(--f-body);font-size:16px;font-weight:600;letter-spacing:.02em}
+@media (max-width:760px){.chamada{grid-template-columns:1fr}}
+.menu a[aria-current="page"]::before{display:none}
