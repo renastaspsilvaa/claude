@@ -210,20 +210,29 @@ function cursor(){
   });
 
   const cores = 5;
-  document.querySelectorAll(".proj").forEach(p => {
-    p.addEventListener("pointerenter", () => {
-      c.classList.add("grande");
-      if (!prev) return;
-      const sf = Number(p.dataset.sf || 0) % cores;
-      prev.innerHTML = `<div class="sem-foto sf-${sf}"><span class="sf-r">Rofi Studio</span><span class="sf-t"></span><span class="logo sym"></span></div>`;
-      prev.querySelector(".sf-t").textContent = p.dataset.nome || "";
+  const lista = document.getElementById("projetos");
+  lista?.addEventListener("pointerover", e => {
+    const p = e.target.closest(".proj");
+    if (!p || p.contains(e.relatedTarget)) return;
+    c.classList.add("grande");
+    if (!prev) return;
+    const sf = Number(p.dataset.sf || 0) % cores;
+    prev.innerHTML = `<div class="sem-foto sf-${sf}"><span class="sf-r">Rofi Studio</span><span class="sf-t"></span><span class="logo sym"></span></div>`;
+    prev.querySelector(".sf-t").textContent = p.dataset.nome || "";
+    if (p.dataset.img){
       const img = new Image();
       img.alt = "";
-      img.onload = () => prev.append(img);
+      img.onload = () => { if (prev.dataset.atual === p.dataset.img) prev.append(img); };
+      prev.dataset.atual = p.dataset.img;
       img.src = p.dataset.img;
-      prev.classList.add("on");
-    });
-    p.addEventListener("pointerleave", () => { c.classList.remove("grande"); prev?.classList.remove("on"); });
+    }
+    prev.classList.add("on");
+  });
+  lista?.addEventListener("pointerout", e => {
+    const p = e.target.closest(".proj");
+    if (!p || p.contains(e.relatedTarget)) return;
+    c.classList.remove("grande");
+    prev?.classList.remove("on");
   });
 
   const anda = () => {
@@ -237,6 +246,47 @@ function cursor(){
     requestAnimationFrame(anda);
   };
   requestAnimationFrame(anda);
+}
+
+/* ---------- projetos: vêm do portfolio (data/projetos.json) ----------
+   O ficheiro é atualizado todos os dias por uma tarefa automática no GitHub
+   (.github/workflows/portfolio.yml). Se não existir, fica a lista escrita no HTML. */
+async function projetos(){
+  const lista = document.getElementById("projetos");
+  if (!lista) return;
+  let dados;
+  try {
+    const r = await fetch("data/projetos.json", { cache: "no-cache" });
+    if (!r.ok) return;
+    dados = await r.json();
+  } catch { return; }
+  const itens = (dados?.projetos || []).filter(p => p?.nome && p?.url);
+  if (!itens.length) return;
+
+  const span = (cls, txt) => { const s = document.createElement("span"); s.className = cls; s.textContent = txt; return s; };
+  const novos = itens.map((p, i) => {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.className = "proj rv visto";
+    a.href = p.url; a.target = "_blank"; a.rel = "noopener";
+    a.dataset.nome = p.nome; a.dataset.sf = i; a.dataset.img = p.imagem || "";
+    a.append(span("proj-n", String(i + 1).padStart(2, "0")), span("proj-nome", p.nome), span("proj-cli", p.info || ""), span("proj-ano", p.ano || ""));
+    if (p.imagem){
+      const t = span("proj-thumb", "");
+      t.setAttribute("aria-hidden", "true");
+      const img = new Image();
+      img.alt = ""; img.onload = () => t.classList.add("ok"); img.onerror = () => t.remove();
+      img.src = p.imagem;
+      t.append(img);
+      a.append(t);
+    }
+    li.append(a);
+    return li;
+  });
+  lista.innerHTML = "";
+  novos.forEach(li => lista.append(li));
+  const total = document.getElementById("proj-total");
+  if (total) total.textContent = `(${String(itens.length).padStart(2, "0")})`;
 }
 
 /* ---------- formulário: abre o email já escrito ---------- */
@@ -291,7 +341,8 @@ tenta(() => document.getElementById("lingua")?.addEventListener("click", () => {
   aplicaLingua(nova);
 }));
 tenta(() => { const ano = document.getElementById("ano"); if (ano) ano.textContent = new Date().getFullYear(); });
-[cabecalho, menu, inclina, scrollFx, cursor, formulario].forEach(tenta);
+[cabecalho, menu, inclina, scrollFx, formulario].forEach(tenta);
+projetos().finally(() => tenta(cursor));
 
 if (!calmo && "IntersectionObserver" in window){
   html.classList.add("js");

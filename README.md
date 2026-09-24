@@ -20,6 +20,14 @@ Se o endereço mudar, procura-o nos 4 ficheiros `.html` e troca-o.
 
 Os textos em PT e EN estão lado a lado em cada página.
 
+## Projetos (automático)
+
+A lista de **Trabalho** no Início copia os projetos da página inicial do portfolio no Framer, pela mesma ordem.
+Uma tarefa do GitHub (`.github/workflows/portfolio.yml`) corre todos os dias às 06:00, guarda a lista em `data/projetos.json` e republica o site se algo mudou.
+
+- Para atualizar logo: GitHub → **Actions** → **Sincronizar projetos do portfolio** → **Run workflow**.
+- Se a leitura falhar, o site mantém a última lista boa (ou os 5 projetos escritos no HTML).
+
 ## Pôr as fotos
 
 As fotos aparecem sozinhas quando existirem com estes nomes (JPG, na vertical 4:5 para projetos, 5:4 para a loja):

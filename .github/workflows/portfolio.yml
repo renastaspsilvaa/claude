@@ -1,0 +1,48 @@
+name: Sincronizar projetos do portfolio
+
+# Todos os dias às 06:00 (hora de Portugal no inverno) e sempre que carregares
+# em "Run workflow" no separador Actions do GitHub.
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: portfolio-sync
+  cancel-in-progress: true
+
+jobs:
+  sincronizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Ler projetos da página inicial do portfolio
+        run: node scripts/sync-portfolio.mjs
+
+      - name: Guardar e republicar o site se a lista mudou
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -z "$(git status --porcelain -- data/)" ]; then
+            echo "Sem alterações."
+            exit 0
+          fi
+          git config user.name "rofi-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/projetos.json
+          git commit -m "Atualizar projetos a partir do portfolio"
+          git push
+          # pede ao GitHub Pages para publicar a nova versão
+          curl -fsS -X POST \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/pages/builds" || true
