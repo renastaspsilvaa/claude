@@ -569,3 +569,15 @@ body::after{display:none}
 .porta:hover{flex-grow:1.2}
 .merch{padding-bottom:clamp(96px,13vw,200px)}
 .rodape-marca{max-width:560px}
+
+/* ajustes: trabalho mais contido, grelhas lado a lado, rodapé discreto */
+.proj{padding:clamp(16px,1.6vw,24px) 0}
+.proj-nome{font-size:clamp(26px,2.8vw,44px)}
+.proj-ano{font-size:18px}
+@media (min-width:901px){
+  .manifesto-grade{grid-template-columns:1fr 1.5fr}
+}
+@media (min-width:601px){
+  .valores{grid-template-columns:1fr 1fr}
+}
+.rodape-marca{max-width:220px}
