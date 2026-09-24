@@ -640,3 +640,6 @@ body::after{display:none}
 .promessa p{font-size:clamp(26px,3.2vw,52px);max-width:24ch}
 
 .nota-loja h3{font-size:24px}
+
+/* linhas animadas: espaço para as letras que descem (g, j, p, ç) */
+.linha{padding-bottom:.2em;margin-bottom:-.2em}
