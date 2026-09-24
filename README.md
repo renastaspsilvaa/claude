@@ -20,6 +20,17 @@ Se o endereço mudar, procura-o nos 4 ficheiros `.html` e troca-o.
 
 Os textos em PT e EN estão lado a lado em cada página.
 
+## Pôr as fotos
+
+As fotos aparecem sozinhas quando existirem com estes nomes (JPG, na vertical 4:5 para projetos, 5:4 para a loja):
+
+| Pasta | Ficheiros |
+|---|---|
+| `assets/trabalhos/` | `aej.jpg`, `archa.jpg`, `quebramar.jpg`, `rofi.jpg`, `comissao.jpg` |
+| `assets/loja/` | `ugc.jpg`, `insta.jpg`, `framer.jpg` |
+
+Enquanto uma foto não existir, o site mostra uma composição gráfica da marca no lugar dela.
+
 ## Pôr os links da loja
 
 Abre `js/main.js` e preenche o bloco `LOJA` no topo:

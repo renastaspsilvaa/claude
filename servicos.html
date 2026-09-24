@@ -9,9 +9,9 @@
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Rofi Studio">
-  <meta property="og:title" content="Rofi Studio · Uma ideia. Infinitas formas de a tornar possível.">
-  <meta property="og:description" content="Estúdio de design da Renata Sofia: marca, design, web, imagem, templates e cursos.">
-  <meta property="og:image" content="assets/og-image.jpg">
+  <meta property="og:title" content="Serviços · Rofi Studio">
+  <meta property="og:description" content="Marca, design, web, imagem, espaço e direção criativa. Do conceito à entrega, com preço e prazo claros.">
+  <meta property="og:image" content="https://rofistudios.com/assets/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
@@ -28,145 +28,150 @@
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C12.9 7.6 16.4 11.1 24 12 16.4 12.9 12.9 16.4 12 24 11.1 16.4 7.6 12.9 0 12 7.6 11.1 11.1 7.6 12 0Z"/></symbol>
-    <symbol id="gota" viewBox="0 0 40 56"><path fill="currentColor" d="M20 0C24 14 40 26 40 37a20 20 0 0 1-40 0C0 26 16 14 20 0Z"/></symbol>
-    <symbol id="seta" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
-    <symbol id="insta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></g></symbol>
-    <symbol id="mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></g></symbol>
+    <symbol id="seta" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
   </defs>
 </svg>
 
 <a class="skip" href="#main"><span data-l="pt">Saltar para o conteúdo</span><span data-l="en">Skip to content</span></a>
 
-<!-- ============ CABEÇALHO ============ -->
-<header class="topo" id="topo">
-  <div class="wrap topo-in">
-    <a href="index.html" class="marca" aria-label="Rofi Studio — início">
-      <span class="logo word" aria-hidden="true"></span>
-    </a>
-
+<header class="topo" id="topo" data-tema="escuro">
+  <div class="topo-in">
+    <a href="index.html" class="marca" aria-label="Rofi Studio — início"><span class="logo word" aria-hidden="true"></span></a>
     <nav class="menu" id="menu" aria-label="Principal">
-      <a href="index.html"><span data-l="pt">Início</span><span data-l="en">Home</span></a>
-      <a href="servicos.html" aria-current="page"><span data-l="pt">Serviços</span><span data-l="en">Services</span></a>
-      <a href="loja.html"><span data-l="pt">Loja</span><span data-l="en">Shop</span></a>
-      <a href="https://portfoliorenatasofia.framer.website" target="_blank" rel="noopener" class="externo">Portfolio <span aria-hidden="true">↗</span></a>
-      <a href="contacto.html" class="btn btn-mini"><span data-l="pt">Contacto</span><span data-l="en">Contact</span></a>
+      <a href="index.html"><span class="m-n">01</span><span data-l="pt">Início</span><span data-l="en">Home</span></a>
+      <a href="servicos.html" aria-current="page"><span class="m-n">02</span><span data-l="pt">Serviços</span><span data-l="en">Services</span></a>
+      <a href="loja.html"><span class="m-n">03</span><span data-l="pt">Loja</span><span data-l="en">Shop</span></a>
+      <a href="https://portfoliorenatasofia.framer.website" target="_blank" rel="noopener"><span class="m-n">04</span>Portfolio <span class="seta-ext" aria-hidden="true">↗</span></a>
+      <a href="contacto.html"><span class="m-n">05</span><span data-l="pt">Contacto</span><span data-l="en">Contact</span></a>
     </nav>
-
     <div class="topo-acoes">
-      <button class="lingua" type="button" id="lingua" aria-label="Mudar para inglês / Switch to Portuguese">
-        <span class="on-pt">EN</span><span class="on-en">PT</span>
-      </button>
-      <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Menu">
-        <span></span><span></span>
-      </button>
+      <button class="lingua" type="button" id="lingua" aria-label="Switch to English"><span class="on-pt">EN</span><span class="on-en">PT</span></button>
+      <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span></button>
     </div>
   </div>
 </header>
 
+<div class="cursor" id="cursor" aria-hidden="true"><span><span data-l="pt">Ver</span><span data-l="en">View</span></span></div>
+
 <main id="main">
 
-<!-- ============ 02 SERVIÇOS ============ -->
-<section class="sec sec-escura pag-topo" id="inicio">
-  <div class="wrap">
-    <div class="sec-head revela">
-      <p class="eyebrow"><span data-l="pt">Serviços</span><span data-l="en">Services</span></p>
-      <h1 class="h-pag">
-        <span data-l="pt">Do conceito à entrega, <br>no mesmo sítio.</span>
-        <span data-l="en">From concept to delivery, <br>in one place.</span>
-      </h1>
-    </div>
-    <p class="lead pag-lead revela">
-      <span data-l="pt">Um projeto pode ser uma marca inteira ou só a peça que te falta. Em qualquer caso, recebes uma proposta com preço e prazo claros antes de começarmos.</span>
-      <span data-l="en">A project can be a whole brand or just the piece you’re missing. Either way, you get a proposal with a clear price and timeline before we start.</span>
-    </p>
-
-    <div class="servicos">
-      <article class="serv destaque revela">
-        <p class="eyebrow"><span data-l="pt">O mais pedido</span><span data-l="en">Core</span></p>
-        <h3><span data-l="pt">Marca e design</span><span data-l="en">Brand &amp; design</span></h3>
-        <p><span data-l="pt">Identidade visual, branding, editorial, comunicação e web. Uma marca inteira ou só a peça que te falta.</span><span data-l="en">Visual identity, branding, editorial, communication and web. A whole brand, or just the piece you’re missing.</span></p>
-        <div class="obj nib3d laranja float" style="--r:14deg" aria-hidden="true"><span class="logo sym"></span></div>
-      </article>
-      <article class="serv revela">
-        <h3><span data-l="pt">Conceito</span><span data-l="en">Concept</span></h3>
-        <p><span data-l="pt">Desenvolvimento de conceitos, narrativa, pesquisa e experimentação.</span><span data-l="en">Concept development, storytelling, research and experimentation.</span></p>
-      </article>
-      <article class="serv revela">
-        <h3><span data-l="pt">Imagem e audiovisual</span><span data-l="en">Image &amp; video</span></h3>
-        <p><span data-l="pt">Fotografia, direção de imagem, vídeo, edição, pós-produção e som.</span><span data-l="en">Photography, art direction, video, editing, post-production and sound.</span></p>
-      </article>
-      <article class="serv revela">
-        <h3><span data-l="pt">Espaço e objeto</span><span data-l="en">Space &amp; object</span></h3>
-        <p><span data-l="pt">Design de produto, design de interiores e experiência espacial.</span><span data-l="en">Product design, interior design and spatial experience.</span></p>
-      </article>
-      <article class="serv revela">
-        <h3><span data-l="pt">Direção e produção</span><span data-l="en">Direction &amp; production</span></h3>
-        <p><span data-l="pt">Direção de projetos, coordenação e produção criativa.</span><span data-l="en">Project direction, coordination and creative production.</span></p>
-      </article>
-    </div>
-
-    <div class="processo">
-      <p class="eyebrow revela"><span data-l="pt">Como trabalho</span><span data-l="en">How I work</span></p>
-      <ol class="passos">
-        <li class="revela">
-          <span class="passo-n">01</span>
-          <h3><span data-l="pt">Ouvir</span><span data-l="en">Listen</span></h3>
-          <p><span data-l="pt">Perceber o problema real por trás do pedido. Quase nunca é só o que está no briefing.</span><span data-l="en">Understand the real problem behind the request. It’s rarely just what’s in the brief.</span></p>
-        </li>
-        <li class="revela">
-          <span class="passo-n">02</span>
-          <h3><span data-l="pt">Decidir</span><span data-l="en">Decide</span></h3>
-          <p><span data-l="pt">Escolher um caminho e um princípio, e explicar-te porquê antes de avançar.</span><span data-l="en">Choose a direction and a principle, and explain why before moving on.</span></p>
-        </li>
-        <li class="revela">
-          <span class="passo-n">03</span>
-          <h3><span data-l="pt">Construir</span><span data-l="en">Build</span></h3>
-          <p><span data-l="pt">Testar, rejeitar, refinar. Vês o trabalho a meio, não só no fim.</span><span data-l="en">Test, reject, refine. You see the work halfway, not only at the end.</span></p>
-        </li>
-        <li class="revela">
-          <span class="passo-n">04</span>
-          <h3><span data-l="pt">Entregar</span><span data-l="en">Deliver</span></h3>
-          <p><span data-l="pt">Ficheiros finais organizados e prontos a usar, com a mesma exigência do primeiro esboço.</span><span data-l="en">Final files, organised and ready to use, with the same care as the first sketch.</span></p>
-        </li>
-      </ol>
-      <svg class="tinta-passos" viewBox="0 0 1000 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C150 10 250 55 400 30 S650 5 780 35 S930 50 1000 20" fill="none" stroke="#CD7000" stroke-width="2.5" stroke-linecap="round"/></svg>
-    </div>
+<!-- ============ TOPO ============ -->
+<section class="pag-hero" data-tema="escuro" data-hero>
+  <div class="nib-canto" data-tilt aria-hidden="true"><div class="nib3d laranja flutua"><span class="logo sym"></span></div></div>
+  <span class="rotulo par"><span data-l="pt">Serviços</span><span data-l="en">Services</span></span>
+  <h1 class="pag-titulo">
+    <span data-l="pt"><span class="linha"><span>Do conceito</span></span><span class="linha l2"><span><em>à entrega.</em></span></span></span>
+    <span data-l="en"><span class="linha"><span>From concept</span></span><span class="linha l2"><span><em>to delivery.</em></span></span></span>
+  </h1>
+  <div class="pag-base wrap entra">
+    <p class="lead" style="color:#D6C9EE"><span data-l="pt">Um projeto pode ser uma marca inteira ou só a peça que te falta. Em qualquer caso, recebes uma proposta com preço e prazo claros antes de começarmos.</span><span data-l="en">A project can be a whole brand or just the piece you’re missing. Either way, you get a proposal with a clear price and timeline before we start.</span></p>
+    <a href="contacto.html" class="btn btn-laranja"><span data-l="pt">Pedir proposta</span><span data-l="en">Ask for a proposal</span> <svg class="i" aria-hidden="true"><use href="#seta"/></svg></a>
   </div>
 </section>
 
-<!-- ============ CTA ============ -->
-<section class="cta-faixa">
-  <div class="wrap cta-in revela">
-    <h2>
-      <span data-l="pt">Tens uma ideia? <em>Conta-me.</em></span>
-      <span data-l="en">Got an idea? <em>Tell me.</em></span>
-    </h2>
-    <a href="contacto.html" class="btn btn-laranja">
-      <span data-l="pt">Falar comigo</span><span data-l="en">Get in touch</span>
-      <svg class="i" aria-hidden="true"><use href="#seta"/></svg>
-    </a>
+<!-- ============ ÁREAS ============ -->
+<section class="sec wrap" data-tema="claro">
+  <div class="sec-cab">
+    <span class="rotulo par" style="color:var(--suave)"><span data-l="pt">Cinco áreas, um estúdio</span><span data-l="en">Five areas, one studio</span></span>
+  </div>
+  <div class="servicos">
+    <details class="serv rv" open>
+      <summary><span class="n">01</span><h2><span data-l="pt">Marca e design</span><span data-l="en">Brand &amp; design</span></h2><span class="mais" aria-hidden="true"></span></summary>
+      <div class="serv-corpo"><p><span data-l="pt">Uma marca inteira ou só a peça que te falta: do logótipo ao site, com um sistema que aguenta crescer.</span><span data-l="en">A whole brand or just the piece you’re missing: from logo to website, with a system that can grow.</span></p><ul class="tags"><li><span data-l="pt">Identidade visual</span><span data-l="en">Visual identity</span></li><li><span data-l="pt">Branding</span><span data-l="en">Branding</span></li><li><span data-l="pt">Editorial</span><span data-l="en">Editorial</span></li><li><span data-l="pt">Comunicação</span><span data-l="en">Communication</span></li><li><span data-l="pt">Web</span><span data-l="en">Web</span></li></ul></div>
+    </details>
+    <details class="serv rv">
+      <summary><span class="n">02</span><h2><span data-l="pt">Conceito</span><span data-l="en">Concept</span></h2><span class="mais" aria-hidden="true"></span></summary>
+      <div class="serv-corpo"><p><span data-l="pt">Antes da forma, a ideia: o que o projeto tem de dizer, a quem, e porquê assim.</span><span data-l="en">Before form, the idea: what the project needs to say, to whom, and why this way.</span></p><ul class="tags"><li><span data-l="pt">Desenvolvimento de conceito</span><span data-l="en">Concept development</span></li><li><span data-l="pt">Narrativa</span><span data-l="en">Storytelling</span></li><li><span data-l="pt">Pesquisa</span><span data-l="en">Research</span></li><li><span data-l="pt">Experimentação</span><span data-l="en">Experimentation</span></li></ul></div>
+    </details>
+    <details class="serv rv">
+      <summary><span class="n">03</span><h2><span data-l="pt">Imagem e audiovisual</span><span data-l="en">Image &amp; video</span></h2><span class="mais" aria-hidden="true"></span></summary>
+      <div class="serv-corpo"><p><span data-l="pt">Imagem fixa e em movimento, da direção à pós-produção, para contar a mesma história em todos os ecrãs.</span><span data-l="en">Still and moving images, from direction to post-production, telling the same story on every screen.</span></p><ul class="tags"><li><span data-l="pt">Fotografia</span><span data-l="en">Photography</span></li><li><span data-l="pt">Direção de imagem</span><span data-l="en">Art direction</span></li><li><span data-l="pt">Vídeo</span><span data-l="en">Video</span></li><li><span data-l="pt">Edição</span><span data-l="en">Editing</span></li><li><span data-l="pt">Pós-produção</span><span data-l="en">Post-production</span></li><li><span data-l="pt">Som</span><span data-l="en">Sound</span></li></ul></div>
+    </details>
+    <details class="serv rv">
+      <summary><span class="n">04</span><h2><span data-l="pt">Espaço e objeto</span><span data-l="en">Space &amp; object</span></h2><span class="mais" aria-hidden="true"></span></summary>
+      <div class="serv-corpo"><p><span data-l="pt">Quando a ideia sai do ecrã: objetos, interiores e experiências que se podem tocar.</span><span data-l="en">When the idea leaves the screen: objects, interiors and experiences you can touch.</span></p><ul class="tags"><li><span data-l="pt">Design de produto</span><span data-l="en">Product design</span></li><li><span data-l="pt">Design de interiores</span><span data-l="en">Interior design</span></li><li><span data-l="pt">Experiência espacial</span><span data-l="en">Spatial experience</span></li></ul></div>
+    </details>
+    <details class="serv rv">
+      <summary><span class="n">05</span><h2><span data-l="pt">Direção e produção</span><span data-l="en">Direction &amp; production</span></h2><span class="mais" aria-hidden="true"></span></summary>
+      <div class="serv-corpo"><p><span data-l="pt">Juntar pessoas, prazos e peças e levar tudo até ao fim, com a mesma exigência do primeiro esboço.</span><span data-l="en">Bringing people, deadlines and pieces together and seeing it all through, with the same care as the first sketch.</span></p><ul class="tags"><li><span data-l="pt">Direção de projetos</span><span data-l="en">Project direction</span></li><li><span data-l="pt">Coordenação</span><span data-l="en">Coordination</span></li><li><span data-l="pt">Produção criativa</span><span data-l="en">Creative production</span></li></ul></div>
+    </details>
+  </div>
+</section>
+
+<!-- ============ PROCESSO ============ -->
+<section class="sec wrap" data-tema="escuro">
+  <div class="processo">
+    <div class="processo-cab">
+      <h2 class="sec-titulo rv"><span data-l="pt">Como<br>trabalho</span><span data-l="en">How<br>I work</span></h2>
+      <p class="lead rv"><span data-l="pt">Quatro passos, sempre os mesmos. Sabes em que ponto estamos a cada momento.</span><span data-l="en">Four steps, always the same. You always know where we are.</span></p>
+    </div>
+    <ol class="passos">
+      <li class="rv"><span class="passo-n">01</span><h3><span data-l="pt">Ouvir</span><span data-l="en">Listen</span></h3><p><span data-l="pt">Perceber o problema real por trás do pedido. Quase nunca é só o que está no briefing.</span><span data-l="en">Understand the real problem behind the request. It’s rarely just what’s in the brief.</span></p></li>
+      <li class="rv"><span class="passo-n">02</span><h3><span data-l="pt">Decidir</span><span data-l="en">Decide</span></h3><p><span data-l="pt">Escolher um caminho e um princípio, e explicar-te porquê antes de avançar.</span><span data-l="en">Choose a direction and a principle, and explain why before moving on.</span></p></li>
+      <li class="rv"><span class="passo-n">03</span><h3><span data-l="pt">Construir</span><span data-l="en">Build</span></h3><p><span data-l="pt">Testar, rejeitar, refinar. Vês o trabalho a meio, não só no fim.</span><span data-l="en">Test, reject, refine. You see the work halfway, not only at the end.</span></p></li>
+      <li class="rv"><span class="passo-n">04</span><h3><span data-l="pt">Entregar</span><span data-l="en">Deliver</span></h3><p><span data-l="pt">Ficheiros finais organizados e prontos a usar, com a mesma exigência do primeiro esboço.</span><span data-l="en">Final files, organised and ready to use, with the same care as the first sketch.</span></p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ PROMESSA ============ -->
+<section class="promessa wrap" data-tema="laranja">
+  <p class="rv"><span data-l="pt">Preço e prazo claros antes de começarmos. <em>Sem pressa inventada, sem letras pequenas.</em></span><span data-l="en">A clear price and timeline before we start. <em>No invented rush, no small print.</em></span></p>
+</section>
+
+<!-- ============ CHAMADA FINAL ============ -->
+<section class="chamada wrap" data-tema="escuro">
+  <div class="nib3d flutua" aria-hidden="true"><span class="logo sym"></span></div>
+  <span class="rotulo par rv"><span data-l="pt">Próximo passo</span><span data-l="en">Next step</span></span>
+  <h2 class="chamada-titulo rv">
+    <span data-l="pt">Tens uma ideia?</span><span data-l="en">Got an idea?</span><br>
+    <a href="contacto.html"><span data-l="pt">Conta-me</span><span data-l="en">Tell me</span><svg aria-hidden="true"><use href="#seta"/></svg></a>
+  </h2>
+  <div class="chamada-base rv">
+    <a class="chamada-mail sublinha" href="mailto:geral.renatasofia@gmail.com">geral.renatasofia@gmail.com</a>
+    <span class="mao"><span data-l="pt">respondo eu, pessoalmente</span><span data-l="en">I reply myself, personally</span> <svg class="spark" aria-hidden="true"><use href="#spark"/></svg></span>
   </div>
 </section>
 
 </main>
 
-<footer class="rodape">
-  <div class="wrap rodape-in">
-    <a href="index.html" class="rodape-marca" aria-label="Rofi Studio — início"><span class="logo rodape-logo" aria-hidden="true"></span></a>
-    <div class="rodape-col">
+<footer class="rodape" data-tema="preto">
+  <div class="rodape-grade">
+    <div>
+      <span class="rotulo">Rofi Studio</span>
       <p><span data-l="pt">Uma ideia. Infinitas formas de a tornar possível.</span><span data-l="en">One idea. Endless ways to make it possible.</span></p>
-      <p class="rodape-links">
-        <a href="servicos.html"><span data-l="pt">Serviços</span><span data-l="en">Services</span></a>
-        <a href="loja.html"><span data-l="pt">Loja</span><span data-l="en">Shop</span></a>
-        <a href="https://portfoliorenatasofia.framer.website" target="_blank" rel="noopener">Portfolio ↗</a>
-        <a href="contacto.html"><span data-l="pt">Contacto</span><span data-l="en">Contact</span></a>
-        <a href="https://www.instagram.com/rofi.studio.rs/" target="_blank" rel="noopener">Instagram</a>
-      </p>
     </div>
-    <p class="rodape-fim">
-      © <span id="ano">2026</span> Rofi Studio · Renata Sofia ·
-      <span data-l="pt">Este site não usa cookies.</span><span data-l="en">This site uses no cookies.</span>
-    </p>
+    <div>
+      <span class="rotulo"><span data-l="pt">Páginas</span><span data-l="en">Pages</span></span>
+      <ul>
+        <li><a href="index.html"><span data-l="pt">Início</span><span data-l="en">Home</span></a></li>
+        <li><a href="servicos.html"><span data-l="pt">Serviços</span><span data-l="en">Services</span></a></li>
+        <li><a href="loja.html"><span data-l="pt">Loja</span><span data-l="en">Shop</span></a></li>
+        <li><a href="https://portfoliorenatasofia.framer.website" target="_blank" rel="noopener">Portfolio ↗</a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="rotulo"><span data-l="pt">Contacto</span><span data-l="en">Contact</span></span>
+      <ul>
+        <li><a href="mailto:geral.renatasofia@gmail.com">Email</a></li>
+        <li><a href="https://www.instagram.com/rofi.studio.rs/" target="_blank" rel="noopener">Instagram ↗</a></li>
+        <li><a href="contacto.html"><span data-l="pt">Formulário</span><span data-l="en">Form</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="rotulo"><span data-l="pt">Base</span><span data-l="en">Based in</span></span>
+      <ul>
+        <li>Oliveira de Azeméis</li>
+        <li>Portugal</li>
+        <li><span data-l="pt">Para o mundo</span><span data-l="en">Working worldwide</span></li>
+      </ul>
+    </div>
+  </div>
+  <a href="index.html" class="rodape-marca" aria-label="Rofi Studio — início"><span class="logo word" aria-hidden="true"></span></a>
+  <div class="rodape-fim">
+    <span>© <span id="ano">2026</span> Rofi Studio · Renata Sofia</span>
+    <span><span data-l="pt">Este site não usa cookies.</span><span data-l="en">This site uses no cookies.</span></span>
+    <a href="#topo" class="sublinha"><span data-l="pt">Voltar ao topo ↑</span><span data-l="en">Back to top ↑</span></a>
   </div>
 </footer>
 

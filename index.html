@@ -9,9 +9,9 @@
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Rofi Studio">
-  <meta property="og:title" content="Rofi Studio · Uma ideia. Infinitas formas de a tornar possível.">
-  <meta property="og:description" content="Estúdio de design da Renata Sofia: marca, design, web, imagem, templates e cursos.">
-  <meta property="og:image" content="assets/og-image.jpg">
+  <meta property="og:title" content="Rofi Studio · Design, marca e web">
+  <meta property="og:description" content="Rofi Studio é o estúdio de design da Renata Sofia. Marca, design, web e imagem para quem tem uma ideia e a quer ver feita — e bem feita.">
+  <meta property="og:image" content="https://rofistudios.com/assets/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
@@ -28,268 +28,241 @@
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C12.9 7.6 16.4 11.1 24 12 16.4 12.9 12.9 16.4 12 24 11.1 16.4 7.6 12.9 0 12 7.6 11.1 11.1 7.6 12 0Z"/></symbol>
-    <symbol id="gota" viewBox="0 0 40 56"><path fill="currentColor" d="M20 0C24 14 40 26 40 37a20 20 0 0 1-40 0C0 26 16 14 20 0Z"/></symbol>
-    <symbol id="seta" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
-    <symbol id="insta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></g></symbol>
-    <symbol id="mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></g></symbol>
+    <symbol id="seta" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
   </defs>
 </svg>
 
 <a class="skip" href="#main"><span data-l="pt">Saltar para o conteúdo</span><span data-l="en">Skip to content</span></a>
 
-<!-- ============ CABEÇALHO ============ -->
-<header class="topo" id="topo">
-  <div class="wrap topo-in">
-    <a href="index.html" class="marca" aria-label="Rofi Studio — início">
-      <span class="logo word" aria-hidden="true"></span>
-    </a>
-
+<header class="topo" id="topo" data-tema="escuro">
+  <div class="topo-in">
+    <a href="index.html" class="marca" aria-label="Rofi Studio — início"><span class="logo word" aria-hidden="true"></span></a>
     <nav class="menu" id="menu" aria-label="Principal">
-      <a href="index.html" aria-current="page"><span data-l="pt">Início</span><span data-l="en">Home</span></a>
-      <a href="servicos.html"><span data-l="pt">Serviços</span><span data-l="en">Services</span></a>
-      <a href="loja.html"><span data-l="pt">Loja</span><span data-l="en">Shop</span></a>
-      <a href="https://portfoliorenatasofia.framer.website" target="_blank" rel="noopener" class="externo">Portfolio <span aria-hidden="true">↗</span></a>
-      <a href="contacto.html" class="btn btn-mini"><span data-l="pt">Contacto</span><span data-l="en">Contact</span></a>
+      <a href="index.html" aria-current="page"><span class="m-n">01</span><span data-l="pt">Início</span><span data-l="en">Home</span></a>
+      <a href="servicos.html"><span class="m-n">02</span><span data-l="pt">Serviços</span><span data-l="en">Services</span></a>
+      <a href="loja.html"><span class="m-n">03</span><span data-l="pt">Loja</span><span data-l="en">Shop</span></a>
+      <a href="https://portfoliorenatasofia.framer.website" target="_blank" rel="noopener"><span class="m-n">04</span>Portfolio <span class="seta-ext" aria-hidden="true">↗</span></a>
+      <a href="contacto.html"><span class="m-n">05</span><span data-l="pt">Contacto</span><span data-l="en">Contact</span></a>
     </nav>
-
     <div class="topo-acoes">
-      <button class="lingua" type="button" id="lingua" aria-label="Mudar para inglês / Switch to Portuguese">
-        <span class="on-pt">EN</span><span class="on-en">PT</span>
-      </button>
-      <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Menu">
-        <span></span><span></span>
-      </button>
+      <button class="lingua" type="button" id="lingua" aria-label="Switch to English"><span class="on-pt">EN</span><span class="on-en">PT</span></button>
+      <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span></button>
     </div>
   </div>
 </header>
 
+<div class="cursor" id="cursor" aria-hidden="true"><span><span data-l="pt">Ver</span><span data-l="en">View</span></span></div>
+
 <main id="main">
 
 <!-- ============ HERO ============ -->
-<section class="hero" id="inicio">
-  <svg class="tinta" viewBox="0 0 900 160" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120 C120 60 190 150 300 100 S470 30 560 90 S720 140 900 50" fill="none" stroke="#CD7000" stroke-width="3" stroke-linecap="round"/></svg>
+<section class="hero" data-tema="escuro" data-hero>
+  <div class="hero-fundo" aria-hidden="true"></div>
+  <div class="hero-nib" data-tilt aria-hidden="true">
+    <div class="hero-halo"></div>
+    <div class="nib3d"><span class="logo sym"></span></div>
+  </div>
 
-  <div class="wrap hero-in">
-    <div class="hero-txt">
-      <p class="eyebrow">
-        <span data-l="pt">Estúdio de design · Portugal, para o mundo</span>
-        <span data-l="en">Design studio · Portugal, working worldwide</span>
-      </p>
-      <h1>
-        <span data-l="pt">Uma ideia. <em>Infinitas formas</em> de a tornar possível.</span>
-        <span data-l="en">One idea. <em>Endless ways</em> to make it possible.</span>
-      </h1>
-      <p class="hero-lead">
-        <span data-l="pt">A Rofi Studio é o estúdio da Renata Sofia. Marca, design, web e imagem para quem tem uma ideia e a quer ver feita — e bem feita.</span>
-        <span data-l="en">Rofi Studio is Renata Sofia’s studio. Branding, design, web and imagery for people who have an idea and want to see it made — and made well.</span>
-      </p>
-      <div class="hero-cta">
-        <a href="contacto.html" class="btn btn-laranja">
-          <span data-l="pt">Começar um projeto</span><span data-l="en">Start a project</span>
-          <svg class="i" aria-hidden="true"><use href="#seta"/></svg>
-        </a>
-        <a href="loja.html" class="btn btn-linha">
-          <span data-l="pt">Ver a loja</span><span data-l="en">Visit the shop</span>
-        </a>
-      </div>
-      <p class="mao hero-mao">
-        <span data-l="pt">da ideia à forma, com as próprias mãos</span>
-        <span data-l="en">from idea to form, by hand</span>
-      </p>
+  <h1 class="hero-titulo">
+    <span data-l="pt"><span class="linha"><span>Uma ideia.</span></span><span class="linha l2"><span>Infinitas</span></span><span class="linha l3"><span>formas.</span></span></span>
+    <span data-l="en"><span class="linha"><span>One idea.</span></span><span class="linha l2"><span>Endless</span></span><span class="linha l3"><span>ways.</span></span></span>
+    <span class="mao entra"><span data-l="pt">de a tornar possível</span><span data-l="en">to make it possible</span></span>
+  </h1>
+
+  <div class="hero-base entra">
+    <p class="lead"><span data-l="pt">A Rofi Studio é o estúdio da Renata Sofia. Marca, design, web e imagem para quem tem uma ideia e a quer ver feita — e bem feita.</span><span data-l="en">Rofi Studio is Renata Sofia’s studio. Branding, design, web and imagery for people who have an idea and want to see it made — and made well.</span></p>
+    <div class="hero-cta">
+      <a href="contacto.html" class="btn btn-laranja"><span data-l="pt">Começar um projeto</span><span data-l="en">Start a project</span> <svg class="i" aria-hidden="true"><use href="#seta"/></svg></a>
+      <a href="https://portfoliorenatasofia.framer.website" target="_blank" rel="noopener" class="btn btn-contorno"><span data-l="pt">Ver portfolio</span><span data-l="en">See portfolio</span> <span aria-hidden="true">↗</span></a>
     </div>
-
-    <div class="hero-vis" aria-hidden="true">
-      <div class="nib3d float grande" style="--r:-12deg"><span class="logo sym"></span></div>
-      <svg class="obj spark twinkle" style="color:#FFB24A;width:34px;height:34px;left:4%;top:12%"><use href="#spark"/></svg>
-      <svg class="obj spark twinkle atraso" style="color:#CBB9EE;width:18px;height:18px;right:8%;bottom:18%"><use href="#spark"/></svg>
-
-      <div class="cartao">
-        <div class="obj fita"></div>
-        <p class="eyebrow escuro"><span data-l="pt">Como começa</span><span data-l="en">How it starts</span></p>
-        <ol>
-          <li><span data-l="pt">Contas-me a tua ideia.</span><span data-l="en">You tell me your idea.</span></li>
-          <li><span data-l="pt">Conversamos sobre o que precisas.</span><span data-l="en">We talk about what you need.</span></li>
-          <li><span data-l="pt">Recebes uma proposta com preço e prazo claros.</span><span data-l="en">You get a proposal with a clear price and timeline.</span></li>
-        </ol>
-      </div>
-    </div>
+    <div class="scroll-ind" aria-hidden="true"><i></i>scroll</div>
   </div>
 </section>
 
-<!-- ============ 01 ESTÚDIO ============ -->
-<section class="sec" id="estudio">
-  <div class="wrap">
-    <div class="sec-head revela">
-      <div class="num"><span>01</span><b data-l="pt">Estúdio</b><b data-l="en">Studio</b></div>
-      <h2>
-        <span data-l="pt">Um estúdio com nome de pessoa.</span>
-        <span data-l="en">A studio with a person’s name.</span>
-      </h2>
+<div class="faixa" data-tema="laranja" aria-hidden="true">
+  <div class="faixa-pista" data-faixa>
+    <div class="faixa-grupo"><span class="faixa-item"><span data-l="pt">Marca</span><span data-l="en">Brand</span></span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg><span class="faixa-item contorno"><span data-l="pt">Design</span><span data-l="en">Design</span></span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg><span class="faixa-item"><span data-l="pt">Web</span><span data-l="en">Web</span></span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg><span class="faixa-item contorno"><span data-l="pt">Imagem</span><span data-l="en">Imagery</span></span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg><span class="faixa-item"><span data-l="pt">Direção criativa</span><span data-l="en">Creative direction</span></span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg><span class="faixa-item contorno"><span data-l="pt">Templates</span><span data-l="en">Templates</span></span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg><span class="faixa-item"><span data-l="pt">Cursos</span><span data-l="en">Courses</span></span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg></div><div class="faixa-grupo"><span class="faixa-item"><span data-l="pt">Marca</span><span data-l="en">Brand</span></span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg><span class="faixa-item contorno"><span data-l="pt">Design</span><span data-l="en">Design</span></span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg><span class="faixa-item"><span data-l="pt">Web</span><span data-l="en">Web</span></span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg><span class="faixa-item contorno"><span data-l="pt">Imagem</span><span data-l="en">Imagery</span></span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg><span class="faixa-item"><span data-l="pt">Direção criativa</span><span data-l="en">Creative direction</span></span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg><span class="faixa-item contorno"><span data-l="pt">Templates</span><span data-l="en">Templates</span></span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg><span class="faixa-item"><span data-l="pt">Cursos</span><span data-l="en">Courses</span></span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg></div>
+  </div>
+</div>
+
+<!-- ============ ESTÚDIO / MANIFESTO ============ -->
+<section class="sec manifesto wrap" data-tema="claro" id="estudio">
+  <span class="rotulo par"><span data-l="pt">01 — Estúdio</span><span data-l="en">01 — Studio</span></span>
+  <p class="manifesto-txt" data-palavras>
+    <span data-l="pt"><b>Rofi</b> vem de <b>Renata Sofia</b>. Um estúdio com nome de pessoa, onde uma ideia passa a coisa real — pensada, experimentada e construída com as próprias mãos.</span><span data-l="en"><b>Rofi</b> comes from <b>Renata Sofia</b>. A studio with a person’s name, where an idea becomes something real — thought through, tested and built by hand.</span>
+  </p>
+
+  <div class="manifesto-grade">
+    <div class="rv">
+      <dl class="ficha">
+        <div><dt><span data-l="pt">Fundadora</span><span data-l="en">Founder</span></dt><dd>Renata Sofia</dd></div>
+        <div><dt><span data-l="pt">Antes</span><span data-l="en">Formerly</span></dt><dd>Lynce Collective</dd></div>
+        <div><dt><span data-l="pt">Formação</span><span data-l="en">Studies</span></dt><dd><span data-l="pt">Arte e Design · ESEC</span><span data-l="en">Art & Design · ESEC</span></dd></div>
+        <div><dt><span data-l="pt">Base</span><span data-l="en">Based in</span></dt><dd><span data-l="pt">Oliveira de Azeméis, PT</span><span data-l="en">Oliveira de Azeméis, PT</span></dd></div>
+        <div><dt><span data-l="pt">Clientes</span><span data-l="en">Clients</span></dt><dd><span data-l="pt">Em qualquer país</span><span data-l="en">Anywhere</span></dd></div>
+      </dl>
+      <span class="mao assina">— Renata</span>
     </div>
-
-    <div class="estudio">
-      <div class="estudio-txt revela">
-        <p class="grande">
-          <span data-l="pt"><b>Rofi</b> vem de <b>Renata Sofia</b>. Curto, meu e fácil de dizer em qualquer língua. “Studio” diz o resto: é um lugar onde se fazem coisas.</span>
-          <span data-l="en"><b>Rofi</b> comes from <b>Renata Sofia</b>. Short, mine, and easy to say in any language. “Studio” says the rest: it’s a place where things get made.</span>
-        </p>
-        <p>
-          <span data-l="pt">O que me move é o caminho entre imaginar uma coisa e fazê-la acontecer: pensar, experimentar, construir e, quando é preciso, começar de novo. A Rofi existe para fazer esse caminho contigo, com cuidado e qualidade.</span>
-          <span data-l="en">What drives me is the path between imagining something and making it happen: thinking, trying, building and, when needed, starting again. Rofi exists to walk that path with you, with care and quality.</span>
-        </p>
-        <p>
-          <span data-l="pt">Estudo Arte e Design na ESEC, em Coimbra, e trabalho a partir de Oliveira de Azeméis, com clientes de qualquer país.</span>
-          <span data-l="en">I study Art and Design at ESEC in Coimbra and work from Oliveira de Azeméis, Portugal, with clients anywhere in the world.</span>
-        </p>
-        <p class="mao assina">— Renata</p>
-      </div>
-
-      <div class="estudio-vis revela" aria-hidden="true">
-        <div class="autocolante"><span class="logo sym"></span></div>
-        <div class="obj fita lilas" style="top:22px;left:14%;transform:rotate(-12deg);width:84px"></div>
-        <p class="mao nota-lado">
-          <span data-l="pt">desenhado à mão, <br>como o logótipo ↓</span>
-          <span data-l="en">drawn by hand, <br>like the logo ↓</span>
-        </p>
-      </div>
-    </div>
-
     <div class="valores">
-      <div class="valor revela">
-        <h3><span data-l="pt">Honesta</span><span data-l="en">Honest</span></h3>
-        <p><span data-l="pt">Preços claros, prazos reais e o uso de IA dito às claras.</span><span data-l="en">Clear prices, real deadlines, and open about any use of AI.</span></p>
-      </div>
-      <div class="valor revela">
-        <h3><span data-l="pt">Com qualidade</span><span data-l="en">Made well</span></h3>
-        <p><span data-l="pt">Cada peça é revista até estar bem, mesmo que demore mais um dia.</span><span data-l="en">Every piece is reviewed until it’s right, even if it takes one more day.</span></p>
-      </div>
-      <div class="valor revela">
-        <h3><span data-l="pt">Próxima</span><span data-l="en">Close</span></h3>
-        <p><span data-l="pt">Falas diretamente comigo, do primeiro email à entrega.</span><span data-l="en">You talk to me directly, from the first email to delivery.</span></p>
-      </div>
-      <div class="valor revela">
-        <h3><span data-l="pt">Ousada</span><span data-l="en">Bold</span></h3>
-        <p><span data-l="pt">Propostas com coragem, sem nunca passar por cima da ética.</span><span data-l="en">Brave proposals, never at the expense of ethics.</span></p>
-      </div>
+      <div class="valor rv"><span class="n">(01)</span><h3><span data-l="pt">Honesta</span><span data-l="en">Honest</span></h3><p><span data-l="pt">Preços claros, prazos reais e o uso de IA dito às claras.</span><span data-l="en">Clear prices, real deadlines, and open about any use of AI.</span></p></div>
+      <div class="valor rv"><span class="n">(02)</span><h3><span data-l="pt">Com qualidade</span><span data-l="en">Made well</span></h3><p><span data-l="pt">Cada peça é revista até estar bem, mesmo que demore mais um dia.</span><span data-l="en">Every piece is reviewed until it’s right, even if it takes one more day.</span></p></div>
+      <div class="valor rv"><span class="n">(03)</span><h3><span data-l="pt">Próxima</span><span data-l="en">Close</span></h3><p><span data-l="pt">Falas diretamente comigo, do primeiro email à entrega.</span><span data-l="en">You talk to me directly, from the first email to delivery.</span></p></div>
+      <div class="valor rv"><span class="n">(04)</span><h3><span data-l="pt">Ousada</span><span data-l="en">Bold</span></h3><p><span data-l="pt">Propostas com coragem, sem nunca passar por cima da ética.</span><span data-l="en">Brave proposals, never at the expense of ethics.</span></p></div>
     </div>
   </div>
 </section>
 
-<!-- ============ ATALHOS ============ -->
-<section class="sec sec-papel2 atalhos-sec">
-  <div class="wrap">
-    <div class="sec-head revela">
-      <div class="num"><span>02</span><b data-l="pt">Por onde começar</b><b data-l="en">Where to start</b></div>
-      <h2>
-        <span data-l="pt">Escolhe a tua porta.</span>
-        <span data-l="en">Pick your door.</span>
-      </h2>
+<!-- ============ TRABALHO ============ -->
+<section class="sec trabalho wrap" data-tema="escuro" id="trabalho">
+  <div class="sec-cab">
+    <h2 class="sec-titulo rv"><span data-l="pt">Trabalho</span><span data-l="en">Work</span><sup>(05)</sup></h2>
+    <p class="lead rv"><span data-l="pt">Uma seleção. Cada projeto abre no portfolio completo.</span><span data-l="en">A selection. Each project opens in the full portfolio.</span></p>
+  </div>
+  <ul class="projetos">
+      <li><a class="proj rv" href="https://portfoliorenatasofia.framer.website" target="_blank" rel="noopener" data-img="assets/trabalhos/aej.jpg" data-sf="0" data-nome="Espetáculo Final AEJ">
+        <span class="proj-n">01</span>
+        <span class="proj-nome">Espetáculo Final AEJ</span>
+        <span class="proj-cli"><span data-l="pt">Direção artística</span><span data-l="en">Art direction</span></span>
+        <span class="proj-ano">2026</span>
+        <span class="proj-thumb" aria-hidden="true"><img src="assets/trabalhos/aej.jpg" alt="" onload="this.parentNode.classList.add('ok')" onerror="this.parentNode.remove()"></span>
+      </a></li>
+      <li><a class="proj rv" href="https://portfoliorenatasofia.framer.website" target="_blank" rel="noopener" data-img="assets/trabalhos/archa.jpg" data-sf="1" data-nome="Archa">
+        <span class="proj-n">02</span>
+        <span class="proj-nome">Archa</span>
+        <span class="proj-cli"><span data-l="pt">PRIMIS Metal</span><span data-l="en">PRIMIS Metal</span></span>
+        <span class="proj-ano">2025</span>
+        <span class="proj-thumb" aria-hidden="true"><img src="assets/trabalhos/archa.jpg" alt="" onload="this.parentNode.classList.add('ok')" onerror="this.parentNode.remove()"></span>
+      </a></li>
+      <li><a class="proj rv" href="https://portfoliorenatasofia.framer.website" target="_blank" rel="noopener" data-img="assets/trabalhos/quebramar.jpg" data-sf="2" data-nome="Concept Store">
+        <span class="proj-n">03</span>
+        <span class="proj-nome">Concept Store</span>
+        <span class="proj-cli"><span data-l="pt">Quebramar</span><span data-l="en">Quebramar</span></span>
+        <span class="proj-ano">2025</span>
+        <span class="proj-thumb" aria-hidden="true"><img src="assets/trabalhos/quebramar.jpg" alt="" onload="this.parentNode.classList.add('ok')" onerror="this.parentNode.remove()"></span>
+      </a></li>
+      <li><a class="proj rv" href="https://portfoliorenatasofia.framer.website" target="_blank" rel="noopener" data-img="assets/trabalhos/rofi.jpg" data-sf="3" data-nome="ROFI">
+        <span class="proj-n">04</span>
+        <span class="proj-nome">ROFI</span>
+        <span class="proj-cli"><span data-l="pt">Identidade de marca</span><span data-l="en">Brand identity</span></span>
+        <span class="proj-ano">2023</span>
+        <span class="proj-thumb" aria-hidden="true"><img src="assets/trabalhos/rofi.jpg" alt="" onload="this.parentNode.classList.add('ok')" onerror="this.parentNode.remove()"></span>
+      </a></li>
+      <li><a class="proj rv" href="https://portfoliorenatasofia.framer.website" target="_blank" rel="noopener" data-img="assets/trabalhos/comissao.jpg" data-sf="4" data-nome="Comissão de Carro">
+        <span class="proj-n">05</span>
+        <span class="proj-nome">Comissão de Carro</span>
+        <span class="proj-cli"><span data-l="pt">Direção fotográfica</span><span data-l="en">Photo direction</span></span>
+        <span class="proj-ano">2025–26</span>
+        <span class="proj-thumb" aria-hidden="true"><img src="assets/trabalhos/comissao.jpg" alt="" onload="this.parentNode.classList.add('ok')" onerror="this.parentNode.remove()"></span>
+      </a></li>
+  </ul>
+  <div class="trabalho-fim rv">
+    <p><span data-l="pt">Identidade, imagem, espaço e direção — o processo e as decisões de cada projeto estão no portfolio.</span><span data-l="en">Identity, imagery, space and direction — the process and decisions behind each project are in the portfolio.</span></p>
+    <a class="link-seta externo" href="https://portfoliorenatasofia.framer.website" target="_blank" rel="noopener"><span data-l="pt">Ver o portfolio completo</span><span data-l="en">See the full portfolio</span><span class="circ"><svg class="i" aria-hidden="true"><use href="#seta"/></svg></span></a>
+  </div>
+  <div class="preview" id="preview" aria-hidden="true"></div>
+</section>
+
+<!-- ============ PORTAS ============ -->
+<section class="portas" aria-label="Serviços e loja">
+  <a class="porta p-serv" href="servicos.html" data-tema="escuro" data-cursor="Ver">
+    <span class="rotulo par"><span data-l="pt">Para o teu projeto</span><span data-l="en">For your project</span></span>
+    <div class="nib3d laranja" aria-hidden="true"><span class="logo sym"></span></div>
+    <div>
+      <h2 class="porta-titulo"><span data-l="pt">Serviços</span><span data-l="en">Services</span></h2>
     </div>
-    <div class="atalhos">
-      <a class="atalho a-serv revela" href="servicos.html">
-        <span class="eyebrow"><span data-l="pt">Para o teu projeto</span><span data-l="en">For your project</span></span>
-        <h3><span data-l="pt">Serviços</span><span data-l="en">Services</span></h3>
-        <p><span data-l="pt">Marca, design, web, imagem e direção criativa — do conceito à entrega.</span><span data-l="en">Brand, design, web, imagery and creative direction — from concept to delivery.</span></p>
-        <span class="atalho-seta"><svg class="i" aria-hidden="true"><use href="#seta"/></svg></span>
-        <div class="obj nib3d laranja" aria-hidden="true"><span class="logo sym"></span></div>
-      </a>
-      <a class="atalho a-loja revela" href="loja.html">
-        <span class="eyebrow"><span data-l="pt">Faz tu mesma</span><span data-l="en">Do it yourself</span></span>
-        <h3><span data-l="pt">Loja</span><span data-l="en">Shop</span></h3>
-        <p><span data-l="pt">Templates prontos a editar no Canva e no Framer, desde 9 €.</span><span data-l="en">Templates ready to edit in Canva and Framer, from €9.</span></p>
-        <span class="atalho-seta"><svg class="i" aria-hidden="true"><use href="#seta"/></svg></span>
-        <div class="obj grelha-mini" aria-hidden="true"><span></span><span class="l"></span><span></span><span class="l"></span></div>
-      </a>
-      <a class="atalho a-port revela" href="https://portfoliorenatasofia.framer.website" target="_blank" rel="noopener">
-        <span class="eyebrow"><span data-l="pt">Trabalho feito</span><span data-l="en">Work I’ve done</span></span>
-        <h3>Portfolio <span aria-hidden="true">↗</span></h3>
-        <p><span data-l="pt">Os meus projetos, um a um. Abre numa nova janela.</span><span data-l="en">My projects, one by one. Opens in a new tab.</span></p>
-        <span class="atalho-seta"><svg class="i" aria-hidden="true"><use href="#seta"/></svg></span>
-        <svg class="obj spark twinkle" style="color:#FFB24A;width:40px;height:40px;right:28px;top:28px" aria-hidden="true"><use href="#spark"/></svg>
-      </a>
+    <div class="porta-base">
+      <p><span data-l="pt">Marca, design, web, imagem e direção criativa — do conceito à entrega.</span><span data-l="en">Brand, design, web, imagery and creative direction — from concept to delivery.</span></p>
+      <span class="circ"><svg class="i" aria-hidden="true"><use href="#seta"/></svg></span>
+    </div>
+  </a>
+  <a class="porta p-loja" href="loja.html" data-tema="laranja">
+    <span class="rotulo par"><span data-l="pt">Faz tu mesma</span><span data-l="en">Do it yourself</span></span>
+    <div class="grelha-deco" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div>
+      <h2 class="porta-titulo"><span data-l="pt">Loja</span><span data-l="en">Shop</span></h2>
+    </div>
+    <div class="porta-base">
+      <p><span data-l="pt">Templates prontos a editar no Canva e no Framer, desde 9 €.</span><span data-l="en">Templates ready to edit in Canva and Framer, from €9.</span></p>
+      <span class="circ"><svg class="i" aria-hidden="true"><use href="#seta"/></svg></span>
+    </div>
+  </a>
+</section>
+
+<!-- ============ A SEGUIR ============ -->
+<section class="sec wrap" data-tema="claro">
+  <div class="sec-cab">
+    <h2 class="sec-titulo rv"><span data-l="pt">A seguir</span><span data-l="en">Coming next</span></h2>
+    <p class="lead rv" style="color:var(--suave)"><span data-l="pt">Aprender a criar. E arrumar a vida pelo meio.</span><span data-l="en">Learn to create. And get life organised along the way.</span></p>
+  </div>
+  <div class="seguir">
+    <div class="seguir-item rv">
+      <span class="etiqueta"><span data-l="pt">Em preparação</span><span data-l="en">In the works</span></span>
+      <h3><span data-l="pt">Cursos</span><span data-l="en">Courses</span></h3>
+      <p><span data-l="pt">Para quem quer aprender a criar e a pôr as próprias ideias de pé. Passo a passo, com exemplos reais e sem jargão.</span><span data-l="en">For anyone who wants to learn to create and get their own ideas off the ground. Step by step, with real examples and no jargon.</span></p>
+      <a class="sublinha" href="mailto:geral.renatasofia@gmail.com?subject=Cursos%20Rofi%20Studio%20-%20quero%20saber%20quando%20abrem" data-assunto-en="Rofi Studio courses - let me know when they open"><span data-l="pt">Avisa-me quando abrirem →</span><span data-l="en">Tell me when they open →</span></a>
+    </div>
+    <div class="seguir-item rv">
+      <span class="etiqueta"><span data-l="pt">Em desenvolvimento</span><span data-l="en">In development</span></span>
+      <h3>Kalmia</h3>
+      <p><span data-l="pt">A app de organização pessoal e de negócio, criada pela Rofi Studio. Para ter a vida e o trabalho no mesmo sítio, com calma.</span><span data-l="en">The personal and business organisation app, made by Rofi Studio. Life and work in one place, calmly.</span></p>
+      <a class="sublinha" href="mailto:geral.renatasofia@gmail.com?subject=Kalmia%20-%20quero%20experimentar" data-assunto-en="Kalmia - I'd like to try it"><span data-l="pt">Quero experimentar →</span><span data-l="en">I’d like to try it →</span></a>
     </div>
   </div>
 </section>
 
-<!-- ============ 04 CURSOS E KALMIA ============ -->
-<section class="sec" id="aprender">
-  <div class="wrap">
-    <div class="sec-head revela">
-      <div class="num"><span>03</span><b data-l="pt">A seguir</b><b data-l="en">Coming next</b></div>
-      <h2>
-        <span data-l="pt">Aprender a criar. <br>E arrumar a vida pelo meio.</span>
-        <span data-l="en">Learn to create. <br>And get life organised along the way.</span>
-      </h2>
-    </div>
-
-    <div class="duo">
-      <article class="painel p-cursos revela">
-        <p class="etiqueta"><span data-l="pt">Em preparação</span><span data-l="en">In the works</span></p>
-        <h3><span data-l="pt">Cursos</span><span data-l="en">Courses</span></h3>
-        <p><span data-l="pt">Para quem quer aprender a criar e a pôr as próprias ideias de pé. Passo a passo, com exemplos reais e sem jargão.</span><span data-l="en">For anyone who wants to learn to create and get their own ideas off the ground. Step by step, with real examples and no jargon.</span></p>
-        <a class="btn btn-branco" href="mailto:geral.renatasofia@gmail.com?subject=Cursos%20Rofi%20Studio%20-%20quero%20saber%20quando%20abrem" data-assunto-en="Rofi Studio courses - let me know when they open">
-          <span data-l="pt">Avisa-me quando abrirem</span><span data-l="en">Tell me when they open</span>
-        </a>
-        <div class="capa-curso" aria-hidden="true">
-          <div class="cc-l"><span class="cc-eb">Curso · Módulo 1</span><span class="cc-t">Da ideia<br>à forma</span><span class="logo word"></span></div>
-          <div class="cc-r"><div class="nib3d branco"><span class="logo sym"></span></div></div>
-        </div>
-      </article>
-
-      <article class="painel p-kalmia revela">
-        <p class="etiqueta"><span data-l="pt">Em desenvolvimento</span><span data-l="en">In development</span></p>
-        <h3>Kalmia</h3>
-        <p><span data-l="pt">A app de organização pessoal e de negócio, criada pela Rofi Studio. Para ter a vida e o trabalho no mesmo sítio, com calma.</span><span data-l="en">The personal and business organisation app, made by Rofi Studio. Life and work in one place, calmly.</span></p>
-        <a class="btn btn-noite" href="mailto:geral.renatasofia@gmail.com?subject=Kalmia%20-%20quero%20experimentar" data-assunto-en="Kalmia - I'd like to try it">
-          <span data-l="pt">Quero experimentar</span><span data-l="en">I’d like to try it</span>
-        </a>
-        <div class="telemovel" aria-hidden="true">
-          <div class="tm-ecra">
-            <span class="tm-t">Hoje</span>
-            <span class="tm-item feito"><i></i>Responder a clientes</span>
-            <span class="tm-item"><i></i>Desenhar produto novo</span>
-            <span class="tm-item"><i></i>Caminhada · 30 min</span>
-            <span class="tm-bolha"></span>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CTA ============ -->
-<section class="cta-faixa">
-  <div class="wrap cta-in revela">
-    <h2>
-      <span data-l="pt">Tens uma ideia? <em>Conta-me.</em></span>
-      <span data-l="en">Got an idea? <em>Tell me.</em></span>
-    </h2>
-    <a href="contacto.html" class="btn btn-laranja">
-      <span data-l="pt">Falar comigo</span><span data-l="en">Get in touch</span>
-      <svg class="i" aria-hidden="true"><use href="#seta"/></svg>
-    </a>
+<!-- ============ CHAMADA FINAL ============ -->
+<section class="chamada wrap" data-tema="escuro">
+  <div class="nib3d flutua" aria-hidden="true"><span class="logo sym"></span></div>
+  <span class="rotulo par rv"><span data-l="pt">Próximo passo</span><span data-l="en">Next step</span></span>
+  <h2 class="chamada-titulo rv">
+    <span data-l="pt">Tens uma ideia?</span><span data-l="en">Got an idea?</span><br>
+    <a href="contacto.html"><span data-l="pt">Conta-me</span><span data-l="en">Tell me</span><svg aria-hidden="true"><use href="#seta"/></svg></a>
+  </h2>
+  <div class="chamada-base rv">
+    <a class="chamada-mail sublinha" href="mailto:geral.renatasofia@gmail.com">geral.renatasofia@gmail.com</a>
+    <span class="mao"><span data-l="pt">respondo eu, pessoalmente</span><span data-l="en">I reply myself, personally</span> <svg class="spark" aria-hidden="true"><use href="#spark"/></svg></span>
   </div>
 </section>
 
 </main>
 
-<footer class="rodape">
-  <div class="wrap rodape-in">
-    <a href="index.html" class="rodape-marca" aria-label="Rofi Studio — início"><span class="logo rodape-logo" aria-hidden="true"></span></a>
-    <div class="rodape-col">
+<footer class="rodape" data-tema="preto">
+  <div class="rodape-grade">
+    <div>
+      <span class="rotulo">Rofi Studio</span>
       <p><span data-l="pt">Uma ideia. Infinitas formas de a tornar possível.</span><span data-l="en">One idea. Endless ways to make it possible.</span></p>
-      <p class="rodape-links">
-        <a href="servicos.html"><span data-l="pt">Serviços</span><span data-l="en">Services</span></a>
-        <a href="loja.html"><span data-l="pt">Loja</span><span data-l="en">Shop</span></a>
-        <a href="https://portfoliorenatasofia.framer.website" target="_blank" rel="noopener">Portfolio ↗</a>
-        <a href="contacto.html"><span data-l="pt">Contacto</span><span data-l="en">Contact</span></a>
-        <a href="https://www.instagram.com/rofi.studio.rs/" target="_blank" rel="noopener">Instagram</a>
-      </p>
     </div>
-    <p class="rodape-fim">
-      © <span id="ano">2026</span> Rofi Studio · Renata Sofia ·
-      <span data-l="pt">Este site não usa cookies.</span><span data-l="en">This site uses no cookies.</span>
-    </p>
+    <div>
+      <span class="rotulo"><span data-l="pt">Páginas</span><span data-l="en">Pages</span></span>
+      <ul>
+        <li><a href="index.html"><span data-l="pt">Início</span><span data-l="en">Home</span></a></li>
+        <li><a href="servicos.html"><span data-l="pt">Serviços</span><span data-l="en">Services</span></a></li>
+        <li><a href="loja.html"><span data-l="pt">Loja</span><span data-l="en">Shop</span></a></li>
+        <li><a href="https://portfoliorenatasofia.framer.website" target="_blank" rel="noopener">Portfolio ↗</a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="rotulo"><span data-l="pt">Contacto</span><span data-l="en">Contact</span></span>
+      <ul>
+        <li><a href="mailto:geral.renatasofia@gmail.com">Email</a></li>
+        <li><a href="https://www.instagram.com/rofi.studio.rs/" target="_blank" rel="noopener">Instagram ↗</a></li>
+        <li><a href="contacto.html"><span data-l="pt">Formulário</span><span data-l="en">Form</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="rotulo"><span data-l="pt">Base</span><span data-l="en">Based in</span></span>
+      <ul>
+        <li>Oliveira de Azeméis</li>
+        <li>Portugal</li>
+        <li><span data-l="pt">Para o mundo</span><span data-l="en">Working worldwide</span></li>
+      </ul>
+    </div>
+  </div>
+  <a href="index.html" class="rodape-marca" aria-label="Rofi Studio — início"><span class="logo word" aria-hidden="true"></span></a>
+  <div class="rodape-fim">
+    <span>© <span id="ano">2026</span> Rofi Studio · Renata Sofia</span>
+    <span><span data-l="pt">Este site não usa cookies.</span><span data-l="en">This site uses no cookies.</span></span>
+    <a href="#topo" class="sublinha"><span data-l="pt">Voltar ao topo ↑</span><span data-l="en">Back to top ↑</span></a>
   </div>
 </footer>
 
