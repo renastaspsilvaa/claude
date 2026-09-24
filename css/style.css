@@ -557,3 +557,15 @@ html[lang="pt"] .on-en,html[lang="en"] .on-pt{display:none}
 .valores-linha{font-family:var(--f-display);font-size:clamp(34px,5.4vw,96px);line-height:1.05;letter-spacing:-.025em;color:var(--noite);margin-top:clamp(64px,8vw,120px);padding-top:clamp(28px,3vw,44px);border-top:1.5px solid var(--noite);display:flex;flex-wrap:wrap;align-items:center;gap:.1em .35em}
 .valores-linha .ct{color:transparent;-webkit-text-stroke:1.5px var(--noite)}
 .valores-linha .spark{width:.36em;height:.36em;color:var(--laranja);vertical-align:middle}
+
+/* =========================================================
+   VERSÃO MAIS LIMPA — menos efeitos, mais espaço
+   ========================================================= */
+body::after{display:none}
+.hero-fundo::after,.hero-halo,.scroll-ind{display:none}
+.hero-fundo{background:radial-gradient(70% 60% at 72% 42%,#3B0F72 0%,rgba(59,15,114,0) 70%),var(--noite)}
+.cursor{display:none!important}
+.etiqueta::before{animation:none}
+.porta:hover{flex-grow:1.2}
+.merch{padding-bottom:clamp(96px,13vw,200px)}
+.rodape-marca{max-width:560px}
