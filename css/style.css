@@ -581,3 +581,19 @@ body::after{display:none}
   .valores{grid-template-columns:1fr 1fr}
 }
 .rodape-marca{max-width:220px}
+
+/* loja: 3 produtos por fila */
+.produtos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,2.6vw,40px);align-items:start}
+.produto,.produto:nth-child(even){display:flex;flex-direction:column;gap:22px}
+.produto:nth-child(even) .prod-fig{order:0}
+.prod-fig{aspect-ratio:4/5;width:100%}
+.prod-info{gap:12px}
+.prod-info h2{font-size:clamp(26px,2.2vw,36px)}
+.prod-info > p.preco{font-size:clamp(28px,2.4vw,38px)}
+.prod-info > p{font-size:15.5px}
+.prod-inclui li{font-size:11.5px;padding:6px 10px}
+.folha{width:36%}
+.grelha{width:66%}
+.browser{width:84%}
+@media (max-width:900px){.produtos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.produtos{grid-template-columns:1fr}}
