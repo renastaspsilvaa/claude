@@ -267,7 +267,7 @@ function formulario(){
     }
     const tipo = TIPOS[l][d.get("tipo")] || "";
     const assunto = l === "pt" ? `Novo projeto (${tipo}) — ${d.get("nome")}` : `New project (${tipo}) — ${d.get("nome")}`;
-    const corpo = `${l === "pt" ? "Olá Renata" : "Hi Renata"},\n\n${d.get("mensagem")}\n\n—\n${d.get("nome")}\n${d.get("email")}`;
+    const corpo = `${l === "pt" ? "Olá, Rofi Studio" : "Hi Rofi Studio"},\n\n${d.get("mensagem")}\n\n—\n${d.get("nome")}\n${d.get("email")}`;
     location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
     nota.classList.add("ok");
     nota.textContent = l === "pt"
