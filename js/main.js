@@ -263,6 +263,17 @@ async function projetos(){
   const itens = (dados?.projetos || []).filter(p => p?.nome && p?.url);
   if (!itens.length) return;
 
+  // imagens mais leves e já carregadas antes de passar o rato
+  itens.forEach(p => {
+    if (!p.imagem) return;
+    try {
+      const u = new URL(p.imagem, location.href);
+      if (u.host.endsWith("framerusercontent.com")) u.searchParams.set("scale-down-to", "1200");
+      p.imagem = u.href;
+    } catch { /* fica como está */ }
+    new Image().src = p.imagem;
+  });
+
   const span = (cls, txt) => { const s = document.createElement("span"); s.className = cls; s.textContent = txt; return s; };
   const novos = itens.map((p, i) => {
     const li = document.createElement("li");
@@ -321,7 +332,7 @@ function formulario(){
     location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
     nota.classList.add("ok");
     nota.textContent = l === "pt"
-      ? `Abri o teu email com a mensagem pronta. Se não abriu, escreve diretamente para ${EMAIL}.`
+      ? `O seu email foi aberto com a mensagem pronta. Se não abriu, escreva diretamente para ${EMAIL}.`
       : `Your email app should now be open with the message ready. If not, write to ${EMAIL}.`;
   });
   form.addEventListener("input", e => e.target.classList?.remove("erro"));

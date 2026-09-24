@@ -72,6 +72,7 @@ async function main(){
       titulo = meta(html, "og:title") || (html.match(/<title>([^<]*)<\/title>/i)?.[1] ?? "");
       if (!imagem) imagem = meta(html, "og:image");
       descricao = meta(html, "og:description");
+      if (descricao === meta(home, "og:description")) descricao = "";
     } catch (e){ console.warn(`⚠ ${e.message}`); }
 
     // o título da página costuma ser "Projeto - Nome do site"; fica só com o projeto
@@ -82,7 +83,8 @@ async function main(){
     const slug = chave.split("/").pop();
     const nomeDoSlug = slug.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
     const nome = p.textos.find(t => t.length > 1 && t.length < 60 && !/^\d{4}/.test(t)) || titulo || nomeDoSlug;
-    const info = p.textos.find(t => t !== nome && t !== ano && t.length > 1 && t.length < 40 && !/^\d+$/.test(t)) || "";
+    const botao = /^(view|see|ver|abrir|open|explore|explorar)\b|project|projeto|→|↗/i;
+    const info = p.textos.find(t => t !== nome && t !== ano && t.length > 1 && t.length < 40 && !/^\d+$/.test(t) && !botao.test(t)) || "";
 
     projetos.push({ nome, info, ano, url: p.url, imagem, descricao });
   }

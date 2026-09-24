@@ -534,3 +534,29 @@ html[lang="pt"] .on-en,html[lang="en"] .on-pt{display:none}
   .passos li{grid-template-columns:1fr}
   .passo-n{grid-row:auto}
 }
+
+/* =========================================================
+   LOJA — categorias e merch
+   ========================================================= */
+.cat-n{font-family:var(--f-body);font-size:.14em;letter-spacing:.14em;vertical-align:top;margin-right:.6em;position:relative;top:.9em;color:var(--laranja)}
+.merch{position:relative;overflow:hidden;isolation:isolate}
+.merch-grade{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,96px);align-items:end;position:relative;z-index:1}
+.merch .etiqueta{margin-top:24px;color:var(--laranja-claro)}
+.merch-txt{display:flex;flex-direction:column;gap:32px;align-items:flex-start}
+.merch-txt .lead{color:#D6C9EE}
+.merch-deco{position:relative;height:clamp(220px,26vw,380px);margin-top:clamp(40px,5vw,72px)}
+.merch-deco .autocolante{position:absolute;left:8%;top:10%;width:clamp(120px,13vw,200px);aspect-ratio:1;border-radius:50%;background:var(--laranja);display:grid;place-items:center;transform:rotate(-10deg);box-shadow:0 24px 40px -16px rgba(0,0,0,.6)}
+.merch-deco .autocolante .logo{width:54%;color:var(--noite)}
+.merch-deco .nib3d{position:absolute;right:10%;top:0;width:clamp(160px,18vw,280px);transform:rotate(14deg)}
+.merch-deco .mao{position:absolute;left:36%;bottom:12%;font-size:clamp(28px,2.8vw,44px);color:var(--laranja-claro);transform:rotate(-4deg)}
+@media (max-width:900px){
+  .merch-grade{grid-template-columns:1fr}
+  .merch-deco .mao{left:8%;bottom:0}
+}
+
+/* valores numa só linha tipográfica */
+.valores-linha{font-family:var(--f-display);font-size:clamp(34px,5.4vw,96px);line-height:1.05;letter-spacing:-.025em;color:var(--noite);margin-top:clamp(64px,8vw,120px);padding-top:clamp(28px,3vw,44px);border-top:1.5px solid var(--noite);display:flex;flex-wrap:wrap;align-items:center;gap:.1em .35em}
+.valores-linha .ct{color:transparent;-webkit-text-stroke:1.5px var(--noite)}
+.valores-linha .spark{width:.36em;height:.36em;color:var(--laranja);vertical-align:middle}
+.manifesto-grade{grid-template-columns:1fr}
+.manifesto-grade > div{max-width:620px;margin-left:auto;width:100%}
