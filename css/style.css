@@ -654,3 +654,27 @@ body::after{display:none}
 .chamada-mail{font-family:var(--f-body);font-size:16px;font-weight:600;letter-spacing:.02em}
 @media (max-width:760px){.chamada{grid-template-columns:1fr}}
 .menu a[aria-current="page"]::before{display:none}
+
+/* chamada final ainda mais discreta */
+.chamada-titulo{font-size:clamp(20px,1.8vw,28px)}
+.chamada{padding-block:clamp(36px,4vw,56px)}
+
+/* portas: serviços em lilás + elementos ilustrativos */
+.porta.p-serv{background:var(--lilas-2);color:var(--noite)}
+.porta.p-serv p{color:var(--noite)}
+.porta.p-serv .rotulo{opacity:.75}
+.porta.p-serv:hover .circ{background:var(--noite);border-color:var(--noite);color:#fff}
+.porta{isolation:isolate}
+.porta-ilus{position:absolute;z-index:-1;pointer-events:none;right:clamp(20px,4vw,64px);top:clamp(28px,4vw,56px);transition:transform .9s var(--ease)}
+.porta:hover .porta-ilus{transform:scale(1.05) rotate(-3deg)}
+.ilus-serv{width:clamp(220px,24vw,360px);height:clamp(150px,15vw,220px)}
+.ilus-serv .nib3d{position:absolute;right:0;top:0;width:44%;transform:rotate(-24deg)}
+.ilus-serv .nib3d .logo{background:radial-gradient(circle at 32% 22%,#6A2FC0 0%,#3B0F72 40%,#170533 85%)}
+.ilus-serv .traco{position:absolute;left:0;bottom:0;width:78%;height:60%;overflow:visible}
+.ilus-serv .traco path{stroke-dasharray:420;stroke-dashoffset:420;transition:stroke-dashoffset 1.4s var(--ease)}
+.porta:hover .ilus-serv .traco path,.porta:focus-visible .ilus-serv .traco path{stroke-dashoffset:0}
+@media (prefers-reduced-motion:reduce),(pointer:coarse){.ilus-serv .traco path{stroke-dashoffset:0}}
+.ilus-loja{width:clamp(130px,13vw,200px);aspect-ratio:200/230}
+.ilus-loja svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 24px 24px rgba(37,9,80,.35))}
+.ilus-loja .logo.sym{position:absolute;left:31%;top:45%;width:38%;color:var(--laranja)}
+@media (max-width:900px){.porta-ilus{opacity:.9}}
