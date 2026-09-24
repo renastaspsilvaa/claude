@@ -321,6 +321,69 @@ html[lang="en"] .on-pt{display:none}
 .rodape-fim{grid-column:1/-1;font-size:13px;color:#8E84A3;border-top:1px solid rgba(255,255,255,.1);padding-top:22px}
 
 /* =========================================================
+   PÁGINAS INTERIORES
+   ========================================================= */
+.menu a[aria-current="page"]:not(.btn)::after{transform:scaleX(1)}
+.menu .btn-mini[aria-current="page"]{box-shadow:0 0 0 2px var(--laranja)}
+.menu a.externo span{font-size:.85em;opacity:.8}
+
+/* primeira secção escura que serve de topo */
+.pag-topo{padding-top:calc(var(--topo) + clamp(56px,8vw,96px))}
+.pag-topo .sec-head{grid-template-columns:1fr;gap:14px;margin-bottom:28px}
+.h-pag{font-size:clamp(44px,6vw,80px);letter-spacing:-.01em}
+.pag-lead{margin-bottom:56px;font-size:clamp(18px,1.6vw,20px)}
+.h-contacto{font-size:clamp(48px,6.4vw,88px);margin:14px 0 22px;line-height:1.02}
+.h-contacto em{color:var(--laranja-claro)}
+.contacto.pag-topo{min-height:100svh}
+
+/* topo escuro da loja */
+.hero-pag{min-height:0;padding:calc(var(--topo) + clamp(56px,8vw,96px)) 0 clamp(72px,9vw,110px)}
+.hero-pag-in{position:relative;z-index:1;width:100%}
+.hero-pag h1{max-width:14ch}
+.hero-pag .tinta{bottom:-40px;opacity:.7}
+.hero-pag-nib{width:clamp(130px,18vw,240px);right:clamp(-20px,6vw,120px);top:50%;margin-top:clamp(-120px,-9vw,-65px)}
+
+/* atalhos do início */
+.atalhos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.atalho{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:12px;min-height:340px;padding:32px 30px;border-radius:24px;text-decoration:none;transition:transform .3s ease,box-shadow .3s ease}
+.atalho:hover{transform:translateY(-6px);box-shadow:0 34px 50px -30px rgba(37,9,80,.6)}
+.atalho h3{font-size:clamp(34px,3.6vw,46px)}
+.atalho p{max-width:30ch;font-size:16px}
+.atalho-seta{margin-top:auto;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;transition:transform .3s ease}
+.atalho:hover .atalho-seta{transform:translateX(6px)}
+.a-serv{background:var(--noite);color:#fff}
+.a-serv .eyebrow{color:var(--lilas)}
+.a-serv p{color:#D6C9EE}
+.a-serv .atalho-seta{background:var(--laranja);color:#fff}
+.a-serv .nib3d{width:130px;right:-20px;bottom:-20px;transform:rotate(-14deg)}
+.a-loja{background:var(--laranja);color:#fff}
+.a-loja .eyebrow{color:#FFE7C7}
+.a-loja p{color:#FFF1DE}
+.a-loja .atalho-seta{background:#fff;color:var(--laranja)}
+.grelha-mini{right:24px;bottom:24px;width:110px;display:grid;grid-template-columns:1fr 1fr;gap:5px;transform:rotate(8deg);filter:drop-shadow(0 14px 14px rgba(90,40,0,.4))}
+.grelha-mini span{aspect-ratio:1;border-radius:5px;background:var(--noite)}
+.grelha-mini span.l{background:#fff}
+.a-port{background:#fff;color:var(--noite);border:1px solid var(--linha)}
+.a-port p{color:var(--suave)}
+.a-port .atalho-seta{background:var(--violeta);color:#fff;transform:rotate(-45deg)}
+.a-port:hover .atalho-seta{transform:rotate(-45deg) translateX(6px)}
+
+/* faixa final com chamada para contacto */
+.cta-faixa{background:radial-gradient(100% 120% at 90% 0%,#3B0F72 0%,var(--noite) 60%);color:#fff;padding-block:clamp(64px,8vw,96px)}
+.cta-in{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.cta-faixa h2{font-size:clamp(36px,4.6vw,60px)}
+.cta-faixa h2 em{color:var(--laranja-claro)}
+
+@media (max-width:1020px){
+  .atalhos{grid-template-columns:1fr}
+  .atalho{min-height:260px}
+}
+@media (max-width:880px){
+  .menu a[aria-current="page"]:not(.btn){color:var(--laranja)}
+  .hero-pag-nib{opacity:.35;right:-30px}
+}
+
+/* =========================================================
    RESPONSIVO
    ========================================================= */
 @media (max-width:1020px){

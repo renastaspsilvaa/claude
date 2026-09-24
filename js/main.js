@@ -18,6 +18,13 @@ const EMAIL = "geral.renatasofia@gmail.com";
 
 /* --------------------------------------------------------- */
 
+const TITULOS = {
+  inicio:   { pt: "Rofi Studio · Design, marca e web", en: "Rofi Studio · Design, branding and web" },
+  servicos: { pt: "Serviços · Rofi Studio",            en: "Services · Rofi Studio" },
+  loja:     { pt: "Loja · Rofi Studio",                en: "Shop · Rofi Studio" },
+  contacto: { pt: "Contacto · Rofi Studio",            en: "Contact · Rofi Studio" },
+};
+
 const NOMES_LOJA = { etsy: "Etsy", gumroad: "Gumroad", framer: "Framer Marketplace" };
 const html = document.documentElement;
 html.classList.add("js");
@@ -42,7 +49,8 @@ function aplicaLingua(l){
   const botao = document.getElementById("lingua");
   if (botao) botao.setAttribute("aria-label", l === "pt" ? "Switch to English" : "Mudar para português");
   document.getElementById("menu")?.setAttribute("aria-label", l === "pt" ? "Principal" : "Main");
-  document.title = l === "pt" ? "Rofi Studio · Design, marca e web" : "Rofi Studio · Design, branding and web";
+  const titulos = TITULOS[html.dataset.pagina];
+  if (titulos) document.title = titulos[l];
   // assuntos dos emails dos cursos e da Kalmia
   document.querySelectorAll("a[data-assunto-en]").forEach(a => {
     if (!a.dataset.assuntoPt) a.dataset.assuntoPt = new URL(a.href).searchParams.get("subject") || "";
@@ -170,7 +178,8 @@ document.getElementById("lingua")?.addEventListener("click", () => {
   aplicaLingua(nova);
 });
 
-document.getElementById("ano").textContent = new Date().getFullYear();
+const ano = document.getElementById("ano");
+if (ano) ano.textContent = new Date().getFullYear();
 cabecalho();
 menuMovel();
 revelar();

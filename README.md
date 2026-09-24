@@ -1,16 +1,24 @@
 # Rofi Studio — site
 
-Site de uma página da Rofi Studio, feito a partir do Brand Book (setembro 2026).
+Site da Rofi Studio, feito a partir do Brand Book (setembro 2026).
 Tem português e inglês (botão PT/EN no topo), funciona no telemóvel e não usa cookies.
 
 ## Ficheiros
 
 | Ficheiro | O que é |
 |---|---|
-| `index.html` | Todos os textos do site (PT e EN lado a lado) |
+| `index.html` | Início: apresentação, estúdio, atalhos, cursos e Kalmia |
+| `servicos.html` | Serviços e processo de trabalho |
+| `loja.html` | Loja de templates |
+| `contacto.html` | Formulário, email e Instagram |
 | `css/style.css` | Cores, letras, objetos da marca, versão de telemóvel |
 | `js/main.js` | Botão de idioma, menu, formulário e **links da loja** |
 | `assets/` | Logótipos, favicon e imagem de partilha |
+
+O botão **Portfolio** no menu abre diretamente `https://portfoliorenatasofia.framer.website` numa nova janela.
+Se o endereço mudar, procura-o nos 4 ficheiros `.html` e troca-o.
+
+Os textos em PT e EN estão lado a lado em cada página.
 
 ## Pôr os links da loja
 
