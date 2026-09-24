@@ -23,7 +23,7 @@
       "ano": "2026",
       "url": "https://portfoliorenatasofia.framer.website/trabalhos/smooth-bit-sess%C3%A3o-fotogr%C3%A1fica",
       "imagem": "https://framerusercontent.com/images/0kczSGNN7tO1MlrxrAd79JEoqKQ.png?width=3465&height=5197",
-      "descricao": "Um espaço onde ideias ganham forma. Exploro a relação entre conceito, estética e narrativa para criar projetos que comunicam além do visual."
+      "descricao": ""
     },
     {
       "nome": "Web Design Portfólio Pessoal",
@@ -31,7 +31,7 @@
       "ano": "2026",
       "url": "https://portfoliorenatasofia.framer.website/trabalhos/web-design-portf%C3%B3lio-pessoal",
       "imagem": "https://framerusercontent.com/images/1mCaH7WMS4WavHiuj3KrHyPPNY.jpg?width=1616&height=1264",
-      "descricao": "Um espaço onde ideias ganham forma. Exploro a relação entre conceito, estética e narrativa para criar projetos que comunicam além do visual."
+      "descricao": "Web design do meu portfólio, pensado para mostrar projetos muito diferentes lado a lado: branding, fotografia, espaço, objeto e direção criativa. O desafio era dar a cada trabalho o mesmo espaço, sem que o site competisse com nenhum deles.\n\nA resposta foi tirar tudo o que sobrava. O site vive a preto e branco, com uma só letra, a Roboto Condensed, e o nome à largura total do ecrã. A cor fica só para os projetos.\n\nO sistema assenta em poucas peças que se repetem: botões em pílula na navegação, etiquetas brancas com o cliente e o ano, e uma grelha de duas colunas que passa a uma no telemóvel. O contacto faz-se num clique, com o e-mail a copiar-se sozinho. Feito em Framer, com animações ao fazer scroll para cada secção chegar no seu tempo."
     },
     {
       "nome": "Espetáculo Final AEJ",
@@ -50,5 +50,5 @@
       "descricao": "Projeto de Videoarte com o tema de autorepresentação."
     }
   ],
-  "atualizado": "2026-09-24T18:50:39.310Z"
+  "atualizado": "2026-09-24T18:56:49.761Z"
 }
