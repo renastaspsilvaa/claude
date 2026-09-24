@@ -564,7 +564,6 @@ html[lang="pt"] .on-en,html[lang="en"] .on-pt{display:none}
 body::after{display:none}
 .hero-fundo::after,.hero-halo,.scroll-ind{display:none}
 .hero-fundo{background:radial-gradient(70% 60% at 72% 42%,#3B0F72 0%,rgba(59,15,114,0) 70%),var(--noite)}
-.cursor{display:none!important}
 .etiqueta::before{animation:none}
 .porta:hover{flex-grow:1.2}
 .merch{padding-bottom:clamp(96px,13vw,200px)}
@@ -597,3 +596,9 @@ body::after{display:none}
 .browser{width:84%}
 @media (max-width:900px){.produtos{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:600px){.produtos{grid-template-columns:1fr}}
+
+/* chamada final e contacto mais contidos */
+.chamada{padding-block:clamp(80px,10vw,150px) clamp(56px,7vw,96px)}
+.chamada-titulo{font-size:clamp(40px,5.6vw,100px);line-height:.95}
+.chamada-titulo a svg{width:.5em;height:.5em}
+.contacto-titulo{font-size:clamp(48px,6vw,110px);line-height:.92}
